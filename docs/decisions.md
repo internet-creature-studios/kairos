@@ -122,6 +122,25 @@ is now `"sunset"`:
   callers that ask for them, and are tested. Nothing in the product uses
   them.
 
+## 2026-11-24: public, under the AGPL
+
+Struck by Dain with Quine. KAIROS is a given work, on the studio's
+public-good side, and must not be enclosable. The repository is public at
+`internet-creature-studios/kairos` under the GNU AGPL, version 3 or later
+(`AGPL-3.0-or-later`, the form GNU recommends): anyone may use it, and
+anyone who builds a service on it shares their code back.
+
+- **Third-party notices.** astronomy-engine is MIT, which sits inside an
+  AGPL work without conflict. Its notice is kept intact in
+  `THIRD_PARTY_NOTICES.md`, and in its own source header, which is marked
+  `@preserve` and `@license` so bundlers carry it into builds. Each new
+  dependency's license gets the same check and a notice there.
+- **For Autumn, before KAIROS is offered as a service:** section 13 of the
+  AGPL asks that people using it over a network be offered its source. The
+  app should carry a plain "Source" link to the repository.
+- **Commits** in this repository use the GitHub no-reply address, so no
+  personal email is published with the history.
+
 ## Not built yet, and why
 
 - **The body layer** (personal noon, sleep range): waits on founder questions

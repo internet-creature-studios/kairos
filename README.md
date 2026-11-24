@@ -36,3 +36,18 @@ npm run bench     # the engine bench at http://localhost:5180
 
 The bench is an instrument for reading the engine's numbers against the sky,
 not the app.
+
+## License
+
+Copyright © 2026 Internet Creature Studios.
+
+KAIROS is free software under the GNU Affero General Public License,
+version 3 or (at your option) any later version: see [`LICENSE`](LICENSE).
+Anyone may use, study, change and share it. Anyone who offers a changed
+version to others, including as a service over a network, must share that
+version's source under the same license.
+
+Sun, Moon and planet positions come from
+[astronomy-engine](https://github.com/cosinekitty/astronomy) by Don Cross,
+under the MIT License; its notice is kept in
+[`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).

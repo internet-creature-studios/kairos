@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "description": "KAIROS: a calendar on creaturetime. Internet Creature Studios.",
+  "license": "AGPL-3.0-or-later",
   "type": "module",
   "scripts": {
     "test": "vitest run",
