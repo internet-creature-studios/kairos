@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>KAIROS engine bench</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --ink: #ece8df;
+        --dim: #8f8a80;
+        --line: #2a2926;
+        --ground: #121211;
+        --day: #e9c77b;
+        --night: #8ea6d8;
+        --ancient: #b59ce0;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        padding: 24px;
+        background: var(--ground);
+        color: var(--ink);
+        font: 14px/1.45 ui-monospace, "SF Mono", Menlo, monospace;
+      }
+      header { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; margin-bottom: 20px; }
+      header h1 { font-size: 14px; font-weight: 600; letter-spacing: 0.08em; margin: 0; }
+      header .note { color: var(--dim); }
+      select, button, input { font: inherit; color: var(--ink); background: #1c1c1a; border: 1px solid var(--line); border-radius: 6px; padding: 4px 8px; }
+      input[type="range"] { width: 260px; padding: 0; }
+      main { display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 16px; }
+      section { border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+      section h2 { font-size: 12px; font-weight: 600; color: var(--dim); letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 10px; }
+      .big { font-size: 40px; letter-spacing: 0.02em; }
+      .dim { color: var(--dim); }
+      table { border-collapse: collapse; width: 100%; }
+      td { padding: 1px 6px 1px 0; white-space: nowrap; }
+      tr.now td { color: var(--ground); background: var(--ink); }
+      .day { color: var(--day); }
+      .night { color: var(--night); }
+      .ancient { color: var(--ancient); }
+      .vigils { display: grid; grid-template-columns: repeat(12, 1fr); gap: 3px; margin: 6px 0 12px; }
+      .vigils div { text-align: center; padding: 6px 0; border-radius: 4px; font-size: 11px; color: var(--ground); }
+      .q-moonlit { background: #cfd8ec; }
+      .q-ancient { background: var(--ancient); }
+      .q-twilight { background: #4a5470; color: var(--ink) !important; }
+      .moon { display: flex; gap: 18px; align-items: center; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>KAIROS · ENGINE BENCH</h1>
+      <span class="note">an instrument for the engine's numbers, not the app</span>
+      <label>place <select id="place"></select></label>
+      <button id="mine" type="button">use my sky</button>
+      <label>time <input id="offset" type="range" min="-360" max="360" step="0.25" value="0" /></label>
+      <button id="now" type="button">now</button>
+      <span id="offsetLabel" class="dim"></span>
+    </header>
+    <main>
+      <section id="here"></section>
+      <section id="day"></section>
+      <section id="moon"></section>
+      <section id="night"></section>
+      <section id="meeting"></section>
+    </main>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>
